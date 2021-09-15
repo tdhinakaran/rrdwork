@@ -1,0 +1,174 @@
+body,
+p {
+    font-family: 'Varta';
+}
+
+section {
+    background-image: url('../images/bg-cover.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    width: 1152px;
+    height: 720px;
+    display: block;
+    margin: auto;
+}
+
+img {
+    width: 140px;
+}
+
+.head {
+    margin-bottom: 170px;
+}
+
+.head p {
+    font-weight: unset;
+    font-style: italic;
+    padding-left: 16px;
+    font-size: 14px;
+}
+
+.head h5 {
+    border-left: 7px solid #000;
+    height: 35px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-weight: unset;
+    font-size: 16px;
+}
+
+.slider {
+    display: flex;
+    align-items: flex-start;
+    align-content: space-around;
+    justify-content: space-around;
+    text-align: center;
+    position: relative;
+    width: 90%;
+    margin: auto;
+    transition: all 750ms ease;
+}
+
+.wheel {
+    width: 284px;
+    height: auto;
+    border: none;
+    padding: 0 10px 16px 10px;
+    -webkit-animation: scaledown 1s linear;
+    -moz-animation: scaledown 1s linear;
+    animation: scaledown 1s linear;
+    transform-origin: 50% 50%;
+    animation-fill-mode: forwards;
+}
+
+.image {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.details {
+    text-align: center;
+}
+
+.details p {
+    font-size: 11px;
+    margin: 0;
+}
+
+.details .title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.details p:last-child {
+    font-weight: bold;
+}
+
+.wheel:hover {
+    border: 1px solid #c8c8ca;
+    background-image: url('../images/wheel-bg.jpg');
+    z-index: 100;
+    -webkit-animation: scale 1s linear;
+    -moz-animation: scale 1s linear;
+    animation: scale 1s linear;
+    transform-origin: 50% 50%;
+    animation-fill-mode: forwards;
+}
+
+.wheel:hover .image {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.wheel:hover img {
+    width: 100%;
+    transform: scale(0.9);
+}
+
+.wheel:hover .details p {
+    font-size: 12px;
+}
+
+.slider .prev,
+.slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 54px;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px 10px;
+    color: #000;
+    font-weight: normal;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    text-decoration: none;
+    transform: translateY(-50% -50%);
+    transition: all 150ms ease;
+}
+
+.slider .prev:hover,
+.slider .next:hover {
+    background-color: transparent;
+    color: #000;
+}
+
+.slider .prev.default,
+.slider .next.default {
+    cursor: default;
+}
+
+.slider .prev.default:hover,
+.slider .next.default:hover {
+    background-color: transparent;
+    cursor: default;
+}
+
+.slider .prev {
+    left: -5%;
+}
+
+.slider .next {
+    right: -5%;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.3);
+    }
+}
+
+@keyframes scaledown {
+    0% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
